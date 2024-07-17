@@ -1,0 +1,63 @@
+{% extends "import.html" %} 
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #751706; position: fixed; top: 0; width: 100%;">
+    <div class="container">
+      <a class="navbar-brand" href="/">Brain Tumor Prediction</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/upload">Upload</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/predict">Predict</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="overlay">
+    <center>
+      <br><h2 style="color: white;">Brain Tumor Classification</h2><br>
+
+        <div class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+            <div class="card" style="width: 30rem; background-color: rgba(255, 255, 255, 0.6);">
+                <div class="card-body">
+                    <div class="image-section" style="display:none;">
+                        <img id="imagePreview" class="img-responsive" src="#" style="width:300px;height:300px; border: 2px solid black;"/><br><br>
+                    </div>                        
+                    <form id="upload-file" method="post" enctype="multipart/form-data" >
+                        <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg" required>
+                        <br><br>
+                        <input type="text" name="textInput" id="textInput" class="form-control" placeholder="Enter mobile number" pattern="\d*" minlength="10" maxlength="10">
+                        <br>
+                        <!-- <div class="form-group">
+                          <label class="switch">
+                              <input type="checkbox" id="protectionToggle">
+                              <span class="slider round"></span>
+                          </label>
+                          <label for="protectionToggle" class="ml-2">Protection Mode</label>
+                      </div> -->
+                        <button type="button" class="btn btn-info" id="btn-upload">Upload</button>
+                    </form>
+                    <h4 id="result1">
+                        <span> </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="loader" style="display:none;"></div>
+    </center>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brain Tumor Prediction</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://th.bing.com/th/id/R.3e2c909ce0405b3bef78f55548b0046b?rik=pTnjjRFBtEuUzA&riu=http%3a%2f%2fwww.folhadoprogresso.com.br%2fwp-content%2fuploads%2f2017%2f11%2favc.jpg&ehk=Z20QPhCwZJD22ZgmOLZwCheyaECYpMT%2f95JTbq1Llvk%3d&risl=&pid=ImgRaw&r=0');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: inherit;
+      backdrop-filter: blur(40px);
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .jumbotron {
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      background-color: transparent;
+    }
+
+    .jumbotron p {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .jumbotron h1 {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .jumbotron hr {
+      border-color: #ffffff;
+    }
+
+    .jumbotron .btn {
+      margin-top: 10px;
+    }
+
+    .jumbotron .btn-primary {
+      background-color: #751706;
+      border: none;
+    }
+
+    .jumbotron .btn-primary:hover {
+      background-color: #012e1e;
+    }
+
+    .jumbotron .btn-primary:focus {
+      box-shadow: none;
+    }
+
+    .jumbotron .btn-primary:not(:disabled):not(.disabled).active {
+      background-color: #1c1c1c;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #751706; position: fixed; top: 0; width: 100%;">
+    <div class="container">
+      <a class="navbar-brand" href="#">Brain Tumor Prediction</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/upload">Upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/predict">Predict</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="overlay">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Brain Tumor Prediction</h1>
+        <br>
+        <p class="lead" style="font-size: 20px;">A brain tumor is a growth of abnormal cells in the brain. The anatomy of the brain is
+          very complex, with different parts responsible for different nervous system functions. Brain tumors can
+          develop in any part of the brain or skull, including its protective lining, the underside of the brain
+          (skull base), the brainstem, the sinuses and the nasal cavity, and many other areas. If not treated at
+          an initial phase, it may lead to death. Despite many significant efforts and promising outcomes in this
+          domain, accurate segmentation and classification remain a challenging task. A major challenge for brain
+          tumor detection arises from the variations in tumor location, shape, and size.</p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="/upload" role="button">Upload</a>
+        <a class="btn btn-primary btn-lg" href="/predict" role="button">Predict</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

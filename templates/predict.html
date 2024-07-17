@@ -1,0 +1,51 @@
+{% extends "import.html" %} 
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #751706; position: fixed; top: 0; width: 100%;">
+    <div class="container">
+      <a class="navbar-brand" href="/">Brain Tumor Prediction</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="/upload">Upload</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/predict">Predict</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="overlay">
+	<center>
+    <br><h2 style="color: white;">Brain Tumor Classification</h2><br>
+
+
+	<div class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+		<div class="card" style="width: 30rem; background-color: rgba(255, 255, 255, 0.7);">
+			<div class="card-body">
+				<img src="https://post.healthline.com/wp-content/uploads/2022/02/2009199_Understanding-Brain-Tumors-01.jpg" class="card-img-top" alt="Brain Tumor Image">
+				<br><br>
+				<input type="text" class="form-control" name="textInput2" id="textInput2" placeholder="Enter mobile number" pattern="\d*" minlength="10" maxlength="10">
+				<br>
+				<button type="button" class="btn btn-info" id="btn-predict">Predict</button>
+				<br><br>
+				<h3 id="result2">
+					<span> </span>
+				</h3>
+			</div>
+		</div>
+	</div>
+
+    <div class="loader" style="display:none;"></div>
+	</center>
+
+</div>
+
+{% endblock %}
